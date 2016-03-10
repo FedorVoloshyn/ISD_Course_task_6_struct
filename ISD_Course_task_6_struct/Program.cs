@@ -105,11 +105,39 @@ namespace ISD_Course_task_6_struct
         }
         public static void ExerciseFive()
         {
-
+            Console.WriteLine("Enter string: ");
+            string userString = Console.ReadLine();
+            Console.WriteLine("Enter number of color (1-14): ");
+            int colorNum = ImputFilter.ImputIntNumber(Console.ReadLine());
+            Printer.Print(userString, colorNum);
         }
         public static void ExerciseSix()
         {
+            Console.WriteLine("Enter worker's name:\n - Fedya\n - Petya\n - Ivan");
 
+            string workerName = Console.ReadLine();
+            Post worker;
+
+            switch(workerName.ToLower())
+            {
+                case "fedya": worker = Post.Fedya;
+                    break;
+                case "petya": worker = Post.Fedya;
+                    break;
+                case "ivan": worker = Post.Fedya;
+                    break;
+                default: Console.WriteLine("No such worker! Default worker = Fedya");
+                    worker = Post.Fedya;
+                    break;
+            }
+
+            Console.WriteLine("Enter hours: ");
+            int hours = ImputFilter.ImputIntNumber(Console.ReadLine());
+
+            if (Accauntant.AskForBonus(worker, hours))
+                Console.WriteLine("He will have a bonus!");
+            else
+                Console.WriteLine("He will have a bonus!");
         }
 
         static void ClassTaker(MyClass myClass)

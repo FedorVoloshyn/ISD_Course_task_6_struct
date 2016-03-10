@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accauntant.cs" />
     <Compile Include="ImputFilter.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="MyStruct.cs" />
